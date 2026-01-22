@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Online | Mercearia do Campo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Custom Scrollbar for horizontal scrolling areas */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-slate-900 antialiased selection:bg-emerald-100 selection:text-emerald-900">
+
+    <!-- Promotional Top Bar -->
+    <div class="bg-emerald-600 text-white text-xs font-medium py-2 text-center tracking-wide">
+        🚀 Entregas grátis em todas as compras acima de 25€!
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 gap-4">
+
+                <!-- Logo & Mobile Menu -->
+                <div class="flex items-center gap-3">
+                    <button class="lg:hidden p-2 -ml-2 text-slate-600 hover:text-slate-900">
+                        <span class="iconify" data-icon="lucide:menu" data-width="24" stroke-width="1.5"></span>
+                    </button>
+                    <a href="index.html" class="flex items-center gap-3 group">
+                        <img src="logo-mercearia.png" alt="Mercearia do Campo" class="h-10 w-10 object-contain">
+                        <span class="text-lg font-bold tracking-tight text-slate-900">Mercearia do Campo</span>
+                    </a>
+                </div>
+
+                <!-- Search Bar (Desktop/Tablet) -->
+                <div class="hidden md:flex flex-1 max-w-2xl mx-4">
+                    <div class="relative w-full group">
+                        <input type="text" placeholder="O que procura hoje? (ex: leite, pão, fruta...)"
+                            class="w-full bg-gray-100 border-none rounded-full py-2.5 pl-12 pr-4 text-sm focus:ring-2 focus:ring-emerald-500/20 focus:bg-white transition-all shadow-sm placeholder:text-gray-400">
+                        <span
+                            class="iconify absolute left-4 top-2.5 text-gray-400 group-focus-within:text-emerald-600 transition-colors"
+                            data-icon="lucide:search" data-width="20" stroke-width="1.5"></span>
+                    </div>
+                </div>
+
+                <!-- User Actions -->
+                <div class="flex items-center gap-2 sm:gap-4">
+                    <a href="index.html"
+                        class="hidden sm:flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
+                        <span class="iconify" data-icon="lucide:home" data-width="20" stroke-width="1.5"></span>
+                        <span>Início</span>
+                    </a>
+                    <button
+                        class="hidden sm:flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
+                        <span class="iconify" data-icon="lucide:user" data-width="20" stroke-width="1.5"></span>
+                        <span>Conta</span>
+                    </button>
+
+                    <button
+                        class="relative group bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-full flex items-center gap-2 transition-all shadow-sm hover:shadow-md">
+                        <span class="iconify" data-icon="lucide:shopping-basket" data-width="20"
+                            stroke-width="1.5"></span>
+                        <span class="text-sm font-medium hidden sm:inline">24,50€</span>
+                        <div
+                            class="absolute -top-1 -right-1 bg-emerald-500 text-white text-[10px] font-bold h-5 w-5 flex items-center justify-center rounded-full border-2 border-white">
+                            3</div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Search (visible only on mobile) -->
+            <div class="md:hidden pb-3">
+                <div class="relative w-full">
+                    <input type="text" placeholder="Pesquisar produtos..."
+                        class="w-full bg-gray-100 border-none rounded-lg py-2 pl-10 pr-4 text-sm focus:ring-1 focus:ring-emerald-500/20">
+                    <span class="iconify absolute left-3 top-2 text-gray-400" data-icon="lucide:search" data-width="18"
+                        stroke-width="1.5"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pb-20">
+
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+            <div
+                class="relative bg-slate-900 rounded-2xl overflow-hidden shadow-lg grid md:grid-cols-2 min-h-[300px] md:min-h-[360px]">
+                <!-- Decorative Circle -->
+                <div class="absolute -top-24 -left-24 w-64 h-64 bg-emerald-900 rounded-full blur-3xl opacity-30"></div>
+
+                <div class="relative z-10 p-8 md:p-12 flex flex-col justify-center items-start text-white">
+                    <span
+                        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-300 text-xs font-medium border border-emerald-500/20 mb-4">
+                        <span class="iconify" data-icon="lucide:zap" data-width="12"></span>
+                        Entrega Rápida
+                    </span>
+                    <h1 class="text-3xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">
+                        Frescura do campo <br>
+                        <span class="text-emerald-400">diretamente à porta.</span>
+                    </h1>
+                    <p class="text-slate-300 mb-8 max-w-sm text-sm md:text-base leading-relaxed">
+                        Receba os melhores produtos nacionais em menos de 2 horas. Qualidade garantida ou devolvemos o
+                        dinheiro.
+                    </p>
+                    <button
+                        class="bg-emerald-500 hover:bg-emerald-400 text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_20px_rgba(16,185,129,0.3)] flex items-center gap-2">
+                        Começar a Comprar
+                        <span class="iconify" data-icon="lucide:arrow-right" data-width="16" stroke-width="2"></span>
+                    </button>
+                </div>
+
+                <div class="relative h-48 md:h-full bg-slate-800 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1000"
+                        alt="Produtos Frescos"
+                        class="absolute inset-0 w-full h-full object-cover object-center opacity-80 md:opacity-100 mix-blend-overlay md:mix-blend-normal">
+
+                    <!-- Floating Badge -->
+                    <div
+                        class="absolute bottom-6 left-6 bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl text-white hidden md:block">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-emerald-500 rounded-full p-1.5">
+                                <span class="iconify text-white" data-icon="lucide:check" data-width="12"></span>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-300">Produção Local</p>
+                                <p class="font-medium text-sm">100% Orgânico</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Scroller -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-lg font-semibold tracking-tight text-slate-900">Categorias Populares</h2>
+                <a href="#" class="text-sm font-medium text-emerald-600 hover:text-emerald-800 flex items-center gap-1">
+                    Ver tudo <span class="iconify" data-icon="lucide:chevron-right" data-width="14"></span>
+                </a>
+            </div>
+
+            <div class="flex gap-4 overflow-x-auto no-scrollbar pb-2">
+                <!-- Category Item -->
+                <a href="#" class="flex flex-col items-center gap-2 min-w-[80px] group">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-white border border-gray-100 shadow-sm flex items-center justify-center group-hover:border-emerald-500 group-hover:shadow-md transition-all text-slate-600 group-hover:text-slate-900">
+                        <span class="iconify" data-icon="lucide:apple" data-width="32" stroke-width="1"></span>
+                    </div>
+                    <span class="text-xs font-medium text-slate-600 group-hover:text-slate-900">Frutas</span>
+                </a>
+
+                <a href="#" class="flex flex-col items-center gap-2 min-w-[80px] group">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-white border border-gray-100 shadow-sm flex items-center justify-center group-hover:border-emerald-500 group-hover:shadow-md transition-all text-slate-600 group-hover:text-slate-900">
+                        <span class="iconify" data-icon="lucide:carrot" data-width="32" stroke-width="1"></span>
+                    </div>
+                    <span class="text-xs font-medium text-slate-600 group-hover:text-slate-900">Legumes</span>
+                </a>
+
+                <a href="#" class="flex flex-col items-center gap-2 min-w-[80px] group">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-white border border-gray-100 shadow-sm flex items-center justify-center group-hover:border-emerald-500 group-hover:shadow-md transition-all text-slate-600 group-hover:text-slate-900">
+                        <span class="iconify" data-icon="lucide:croissant" data-width="32" stroke-width="1"></span>
+                    </div>
+                    <span class="text-xs font-medium text-slate-600 group-hover:text-slate-900">Padaria</span>
+                </a>
+
+                <a href="#" class="flex flex-col items-center gap-2 min-w-[80px] group">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-white border border-gray-100 shadow-sm flex items-center justify-center group-hover:border-emerald-500 group-hover:shadow-md transition-all text-slate-600 group-hover:text-slate-900">
+                        <span class="iconify" data-icon="lucide:milk" data-width="32" stroke-width="1"></span>
+                    </div>
+                    <span class="text-xs font-medium text-slate-600 group-hover:text-slate-900">Laticínios</span>
+                </a>
+
+                <a href="#" class="flex flex-col items-center gap-2 min-w-[80px] group">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-white border border-gray-100 shadow-sm flex items-center justify-center group-hover:border-emerald-500 group-hover:shadow-md transition-all text-slate-600 group-hover:text-slate-900">
+                        <span class="iconify" data-icon="lucide:beef" data-width="32" stroke-width="1"></span>
+                    </div>
+                    <span class="text-xs font-medium text-slate-600 group-hover:text-slate-900">Talho</span>
+                </a>
+
+                <a href="#" class="flex flex-col items-center gap-2 min-w-[80px] group">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-white border border-gray-100 shadow-sm flex items-center justify-center group-hover:border-emerald-500 group-hover:shadow-md transition-all text-slate-600 group-hover:text-slate-900">
+                        <span class="iconify" data-icon="lucide:fish" data-width="32" stroke-width="1"></span>
+                    </div>
+                    <span class="text-xs font-medium text-slate-600 group-hover:text-slate-900">Peixaria</span>
+                </a>
+                <a href="#" class="flex flex-col items-center gap-2 min-w-[80px] group">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-white border border-gray-100 shadow-sm flex items-center justify-center group-hover:border-emerald-500 group-hover:shadow-md transition-all text-slate-600 group-hover:text-slate-900">
+                        <span class="iconify" data-icon="lucide:wine" data-width="32" stroke-width="1"></span>
+                    </div>
+                    <span class="text-xs font-medium text-slate-600 group-hover:text-slate-900">Garrafeira</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Quick Filters -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+            <div class="flex flex-wrap gap-2">
+                <button
+                    class="px-4 py-1.5 bg-slate-900 text-white rounded-full text-xs font-medium shadow-sm transition-transform hover:scale-105">Todos</button>
+                <button
+                    class="px-4 py-1.5 bg-white border border-gray-200 text-slate-600 hover:border-slate-300 hover:text-slate-900 rounded-full text-xs font-medium transition-all">Promoções</button>
+                <button
+                    class="px-4 py-1.5 bg-white border border-gray-200 text-slate-600 hover:border-slate-300 hover:text-slate-900 rounded-full text-xs font-medium transition-all">Bio
+                    & Saudável</button>
+                <button
+                    class="px-4 py-1.5 bg-white border border-gray-200 text-slate-600 hover:border-slate-300 hover:text-slate-900 rounded-full text-xs font-medium transition-all">Sem
+                    Glúten</button>
+                <button
+                    class="px-4 py-1.5 bg-white border border-gray-200 text-slate-600 hover:border-slate-300 hover:text-slate-900 rounded-full text-xs font-medium transition-all">Congelados</button>
+            </div>
+        </section>
+
+        <!-- Product Grid -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+            <h2 class="text-xl font-semibold tracking-tight text-slate-900 mb-6">Ofertas da Semana</h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+
+                <!-- Product Card 1 -->
+                <div
+                    class="group bg-white rounded-2xl border border-gray-100 p-3 flex flex-col hover:shadow-lg transition-all duration-300 relative">
+                    <div
+                        class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded shadow-sm z-10">
+                        -20%</div>
+                    <div class="relative h-32 w-full bg-gray-50 rounded-xl overflow-hidden mb-3">
+                        <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&q=80&w=400"
+                            alt="Melão"
+                            class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="flex-1 flex flex-col">
+                        <div class="text-[10px] text-gray-400 font-medium uppercase tracking-wider mb-1">Frutas</div>
+                        <h3 class="text-sm font-medium text-slate-900 leading-tight mb-2">Melão Branco Nacional</h3>
+                        <div class="mt-auto">
+                            <div class="flex items-end gap-2 mb-3">
+                                <span class="text-lg font-bold text-slate-900">1,49€</span>
+                                <span class="text-xs text-gray-400 line-through mb-1">1,99€</span>
+                                <span class="text-[10px] text-gray-400 mb-1">/kg</span>
+                            </div>
+                            <button
+                                class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 transition-colors active:scale-95">
+                                <span class="iconify" data-icon="lucide:shopping-cart" data-width="14"></span>
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div
+                    class="group bg-white rounded-2xl border border-gray-100 p-3 flex flex-col hover:shadow-lg transition-all duration-300">
+                    <div class="relative h-32 w-full bg-gray-50 rounded-xl overflow-hidden mb-3">
+                        <img src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&q=80&w=400"
+                            alt="Leite"
+                            class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="flex-1 flex flex-col">
+                        <div class="text-[10px] text-gray-400 font-medium uppercase tracking-wider mb-1">Laticínios
+                        </div>
+                        <h3 class="text-sm font-medium text-slate-900 leading-tight mb-2">Leite Meio Gordo Mimosa 1L
+                        </h3>
+                        <div class="mt-auto">
+                            <div class="flex items-end gap-2 mb-3">
+                                <span class="text-lg font-bold text-slate-900">0,89€</span>
+                                <span class="text-[10px] text-gray-400 mb-1">/un</span>
+                            </div>
+                            <button
+                                class="w-full bg-white border border-slate-200 hover:border-emerald-600 hover:text-emerald-600 text-slate-900 py-2 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 transition-colors active:scale-95 group-hover:bg-slate-50">
+                                <span class="iconify" data-icon="lucide:shopping-cart" data-width="14"></span>
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div
+                    class="group bg-white rounded-2xl border border-gray-100 p-3 flex flex-col hover:shadow-lg transition-all duration-300 relative">
+                    <div
+                        class="absolute top-3 left-3 bg-emerald-500 text-white text-[10px] font-bold px-2 py-1 rounded shadow-sm z-10">
+                        NOVO</div>
+                    <div class="relative h-32 w-full bg-gray-50 rounded-xl overflow-hidden mb-3">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=400"
+                            alt="Pão"
+                            class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="flex-1 flex flex-col">
+                        <div class="text-[10px] text-gray-400 font-medium uppercase tracking-wider mb-1">Padaria</div>
+                        <h3 class="text-sm font-medium text-slate-900 leading-tight mb-2">Pão Alentejano Fatiado 500g
+                        </h3>
+                        <div class="mt-auto">
+                            <div class="flex items-end gap-2 mb-3">
+                                <span class="text-lg font-bold text-slate-900">1,25€</span>
+                                <span class="text-[10px] text-gray-400 mb-1">/un</span>
+                            </div>
+                            <button
+                                class="w-full bg-white border border-slate-200 hover:border-emerald-600 hover:text-emerald-600 text-slate-900 py-2 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 transition-colors active:scale-95 group-hover:bg-slate-50">
+                                <span class="iconify" data-icon="lucide:shopping-cart" data-width="14"></span>
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div
+                    class="group bg-white rounded-2xl border border-gray-100 p-3 flex flex-col hover:shadow-lg transition-all duration-300">
+                    <div class="relative h-32 w-full bg-gray-50 rounded-xl overflow-hidden mb-3">
+                        <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&q=80&w=400"
+                            alt="Café"
+                            class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="flex-1 flex flex-col">
+                        <div class="text-[10px] text-gray-400 font-medium uppercase tracking-wider mb-1">Mercearia</div>
+                        <h3 class="text-sm font-medium text-slate-900 leading-tight mb-2">Café Moído Delta Lote Chávena
+                        </h3>
+                        <div class="mt-auto">
+                            <div class="flex items-end gap-2 mb-3">
+                                <span class="text-lg font-bold text-slate-900">3,49€</span>
+                                <span class="text-[10px] text-gray-400 mb-1">/un</span>
+                            </div>
+                            <button
+                                class="w-full bg-white border border-slate-200 hover:border-emerald-600 hover:text-emerald-600 text-slate-900 py-2 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 transition-colors active:scale-95 group-hover:bg-slate-50">
+                                <span class="iconify" data-icon="lucide:shopping-cart" data-width="14"></span>
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div
+                    class="group bg-white rounded-2xl border border-gray-100 p-3 flex flex-col hover:shadow-lg transition-all duration-300 relative">
+                    <div
+                        class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded shadow-sm z-10">
+                        -15%</div>
+                    <div class="relative h-32 w-full bg-gray-50 rounded-xl overflow-hidden mb-3">
+                        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg"
+                            alt="Salmão"
+                            class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="flex-1 flex flex-col">
+                        <div class="text-[10px] text-gray-400 font-medium uppercase tracking-wider mb-1">Peixaria</div>
+                        <h3 class="text-sm font-medium text-slate-900 leading-tight mb-2">Salmão Fresco Posta</h3>
+                        <div class="mt-auto">
+                            <div class="flex items-end gap-2 mb-3">
+                                <span class="text-lg font-bold text-slate-900">12,99€</span>
+                                <span class="text-xs text-gray-400 line-through mb-1">15,99€</span>
+                                <span class="text-[10px] text-gray-400 mb-1">/kg</span>
+                            </div>
+                            <button
+                                class="w-full bg-slate-900 hover:bg-emerald-600 text-white py-2 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 transition-colors active:scale-95">
+                                <span class="iconify" data-icon="lucide:shopping-cart" data-width="14"></span>
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 -->
+                <div
+                    class="group bg-white rounded-2xl border border-gray-100 p-3 flex flex-col hover:shadow-lg transition-all duration-300">
+                    <div class="relative h-32 w-full bg-gray-50 rounded-xl overflow-hidden mb-3">
+                        <img src="https://images.unsplash.com/photo-1534939561126-855b8675edd7?auto=format&fit=crop&q=80&w=400"
+                            alt="Carne"
+                            class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="flex-1 flex flex-col">
+                        <div class="text-[10px] text-gray-400 font-medium uppercase tracking-wider mb-1">Talho</div>
+                        <h3 class="text-sm font-medium text-slate-900 leading-tight mb-2">Bife da Vazia Novilho</h3>
+                        <div class="mt-auto">
+                            <div class="flex items-end gap-2 mb-3">
+                                <span class="text-lg font-bold text-slate-900">14,50€</span>
+                                <span class="text-[10px] text-gray-400 mb-1">/kg</span>
+                            </div>
+                            <button
+                                class="w-full bg-white border border-slate-200 hover:border-emerald-600 hover:text-emerald-600 text-slate-900 py-2 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 transition-colors active:scale-95 group-hover:bg-slate-50">
+                                <span class="iconify" data-icon="lucide:shopping-cart" data-width="14"></span>
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 7 -->
+                <div
+                    class="group bg-white rounded-2xl border border-gray-100 p-3 flex flex-col hover:shadow-lg transition-all duration-300">
+                    <div class="relative h-32 w-full bg-gray-50 rounded-xl overflow-hidden mb-3">
+                        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4734259a-bad7-422f-981e-ce01e79184f2_1600w.jpg"
+                            alt="Ovos"
+                            class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="flex-1 flex flex-col">
+                        <div class="text-[10px] text-gray-400 font-medium uppercase tracking-wider mb-1">Laticínios
+                        </div>
+                        <h3 class="text-sm font-medium text-slate-900 leading-tight mb-2">Ovos Classe L (Dúzia)</h3>
+                        <div class="mt-auto">
+                            <div class="flex items-end gap-2 mb-3">
+                                <span class="text-lg font-bold text-slate-900">2,10€</span>
+                                <span class="text-[10px] text-gray-400 mb-1">/un</span>
+                            </div>
+                            <button
+                                class="w-full bg-white border border-slate-200 hover:border-emerald-600 hover:text-emerald-600 text-slate-900 py-2 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 transition-colors active:scale-95 group-hover:bg-slate-50">
+                                <span class="iconify" data-icon="lucide:shopping-cart" data-width="14"></span>
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 8 -->
+                <div
+                    class="group bg-white rounded-2xl border border-gray-100 p-3 flex flex-col hover:shadow-lg transition-all duration-300 relative">
+                    <div
+                        class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded shadow-sm z-10">
+                        -10%</div>
+                    <div class="relative h-32 w-full bg-gray-50 rounded-xl overflow-hidden mb-3">
+                        <img src="https://images.unsplash.com/photo-1594221708779-94832f4320d1?auto=format&fit=crop&q=80&w=400"
+                            alt="Azeite"
+                            class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="flex-1 flex flex-col">
+                        <div class="text-[10px] text-gray-400 font-medium uppercase tracking-wider mb-1">Mercearia</div>
+                        <h3 class="text-sm font-medium text-slate-900 leading-tight mb-2">Azeite Virgem Extra Gallo 75cl
+                        </h3>
+                        <div class="mt-auto">
+                            <div class="flex items-end gap-2 mb-3">
+                                <span class="text-lg font-bold text-slate-900">6,99€</span>
+                                <span class="text-xs text-gray-400 line-through mb-1">7,79€</span>
+                                <span class="text-[10px] text-gray-400 mb-1">/un</span>
+                            </div>
+                            <button
+                                class="w-full bg-slate-900 hover:bg-emerald-600 text-white py-2 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 transition-colors active:scale-95">
+                                <span class="iconify" data-icon="lucide:shopping-cart" data-width="14"></span>
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-10 flex justify-center">
+                <button
+                    class="px-8 py-3 border border-slate-200 bg-white hover:bg-gray-50 text-slate-700 rounded-full text-sm font-medium transition-colors shadow-sm">
+                    Carregar mais produtos
+                </button>
+            </div>
+        </section>
+
+        <!-- Newsletter / Feature Banner -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 mb-8">
+            <div class="bg-emerald-600 rounded-2xl p-8 md:p-12 relative overflow-hidden">
+                <div
+                    class="absolute right-0 top-0 h-full w-1/3 bg-emerald-500 transform skew-x-12 translate-x-12 opacity-50">
+                </div>
+                <div class="relative z-10 max-w-xl text-white">
+                    <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-3">Não perca as ofertas relâmpago!</h2>
+                    <p class="text-emerald-50 mb-6 text-sm md:text-base">Subscreva a nossa newsletter e receba todas as
+                        semanas os folhetos de descontos e cupões exclusivos.</p>
+                    <div class="flex gap-2 max-w-md">
+                        <input type="email" placeholder="O seu email"
+                            class="flex-1 px-4 py-3 rounded-xl border-none text-slate-900 text-sm focus:ring-2 focus:ring-white shadow-sm placeholder:text-gray-400">
+                        <button
+                            class="bg-slate-900 text-white px-6 py-3 rounded-xl text-sm font-semibold hover:bg-slate-800 transition-colors">
+                            Subscrever
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-gray-100">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex items-start gap-4">
+                    <div class="bg-blue-50 text-blue-900 p-3 rounded-lg">
+                        <span class="iconify" data-icon="lucide:truck" data-width="24" stroke-width="1.5"></span>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-slate-900 text-sm">Entregas no Próprio Dia</h4>
+                        <p class="text-xs text-slate-500 mt-1">Para pedidos feitos até às 14h em Vila Franca de Xira e
+                            Alenquer.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="bg-emerald-50 text-emerald-700 p-3 rounded-lg">
+                        <span class="iconify" data-icon="lucide:shield-check" data-width="24" stroke-width="1.5"></span>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-slate-900 text-sm">Pagamento Seguro</h4>
+                        <p class="text-xs text-slate-500 mt-1">Aceitamos MBWay, Multibanco e Cartões de Crédito.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="bg-green-50 text-green-700 p-3 rounded-lg">
+                        <span class="iconify" data-icon="lucide:leaf" data-width="24" stroke-width="1.5"></span>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-slate-900 text-sm">Frescura Garantida</h4>
+                        <p class="text-xs text-slate-500 mt-1">Trabalhamos diretamente com produtores locais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="col-span-2 md:col-span-1">
+                <div class="flex items-center gap-3 mb-4 text-white">
+                    <img src="logo-mercearia.png" alt="Mercearia do Campo" class="h-8 w-8 object-contain">
+                    <span class="font-bold tracking-tight">Mercearia do Campo</span>
+                </div>
+                <p class="mb-4 text-xs">A sua mercearia online de confiança. Levamos os sabores do campo até à sua mesa.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white"><span class="iconify" data-icon="lucide:facebook"
+                            data-width="18"></span></a>
+                    <a href="#" class="hover:text-white"><span class="iconify" data-icon="lucide:instagram"
+                            data-width="18"></span></a>
+                    <a href="#" class="hover:text-white"><span class="iconify" data-icon="lucide:twitter"
+                            data-width="18"></span></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold mb-4">Loja</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#" class="hover:text-emerald-400 transition-colors">Novidades</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 transition-colors">Mais Vendidos</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 transition-colors">Promoções</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 transition-colors">Marcas</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold mb-4">Apoio</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#" class="hover:text-emerald-400 transition-colors">Ajuda & FAQ</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 transition-colors">Entregas</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 transition-colors">Devoluções</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 transition-colors">Contactos</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold mb-4">Empresa</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="index.html#sobre" class="hover:text-emerald-400 transition-colors">Sobre Nós</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 transition-colors">Privacidade</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 transition-colors">Termos</a></li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+            <p>© 2024 Mercearia do Campo. Todos os direitos reservados.</p>
+            <div class="flex items-center gap-2 opacity-50">
+                <span class="iconify" data-icon="lucide:credit-card" data-width="20"></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Bottom Mobile Navigation (Visible only on small screens) -->
+    <div
+        class="md:hidden fixed bottom-0 w-full bg-white border-t border-gray-100 px-6 py-3 flex justify-between items-center z-50 text-xs font-medium text-slate-500 shadow-[0_-5px_20px_rgba(0,0,0,0.05)]">
+        <a href="index.html" class="flex flex-col items-center gap-1 hover:text-slate-900">
+            <span class="iconify" data-icon="lucide:home" data-width="20" stroke-width="2"></span>
+            <span>Início</span>
+        </a>
+        <a href="#" class="flex flex-col items-center gap-1 text-slate-900">
+            <span class="iconify" data-icon="lucide:grid" data-width="20" stroke-width="2"></span>
+            <span>Categorias</span>
+        </a>
+        <a href="#" class="flex flex-col items-center gap-1 hover:text-slate-900 relative">
+            <div class="absolute -top-1 -right-1 bg-emerald-500 rounded-full w-2 h-2"></div>
+            <span class="iconify" data-icon="lucide:shopping-basket" data-width="20" stroke-width="2"></span>
+            <span>Carrinho</span>
+        </a>
+        <a href="#" class="flex flex-col items-center gap-1 hover:text-slate-900">
+            <span class="iconify" data-icon="lucide:user" data-width="20" stroke-width="2"></span>
+            <span>Conta</span>
+        </a>
+    </div>
+
+</body>
+
+</html>
