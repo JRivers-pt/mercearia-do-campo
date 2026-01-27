@@ -2,7 +2,7 @@
 
 ## 📋 Visão Geral
 
-Website completo para a **Mercearia do Campo**, uma mercearia online que oferece produtos frescos e nacionais com entregas exclusivas na zona de **Vila Franca de Xira a Alenquer**.
+Website completo para a **Mercearia do Campo**, uma mercearia online que oferece produtos frescos e nacionais com entregas entre **Vila Franca de Xira e Alenquer** (incluindo Arruda, Carregado e Castanheira).
 
 ## 🎯 Estrutura do Website
 
@@ -76,10 +76,10 @@ Inclui navegação móvel fixa na parte inferior para melhor UX em smartphones.
 
 ## 📍 Zona de Cobertura
 
-**Entregas exclusivas entre:**
+**Entregas entre:**
 - Vila Franca de Xira
 - Alenquer
-- Localidades intermédias
+- Arruda, Carregado, Castanheira e arredores
 
 ## 🛠️ Tecnologias Utilizadas
 

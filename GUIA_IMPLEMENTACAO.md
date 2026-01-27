@@ -47,7 +47,7 @@ A loja virtual (`loja.html`) permite voltar à landing page através de:
 
 ## 🚚 Informações de Entrega
 
-- **Zonas de Entrega**: Vila Franca de Xira, Arruda e Alenquer
+- **Entregas**: Entre Vila Franca de Xira e Alenquer (incluindo Arruda, Carregado e Castanheira)
 - **Horário de Entregas**: Segunda a Sexta
   - 12:30h - 15:30h
   - 19:30h - 20:30h
